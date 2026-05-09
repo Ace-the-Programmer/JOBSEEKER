@@ -14,26 +14,26 @@ class Database
         ];
 
         try {
-            $this->conn = new PDO($dsn, $config['username'], $config['password'], $options);
-            echo 'connected';
+            $this->conn = new PDO(
+                $dsn,
+                $config['username'],
+                $config['password'],
+                $options
+            );
+            echo "Connected";
         } catch (PDOException $e) {
-            throw new Exception("Database connection failed: {$e->getMessage()}");
+            throw new Exception("Database failed connection: {$e->getMessage()}");
         }
     }
 
-    public function query($query, $params = [])
+    public function Query($Query)
     {
         try {
-            $sth = $this->conn->prepare($query);
-
-            foreach ($params as $param => $value) {
-                $sth->bindValue(':' . $param, $value);
-            }
-
+            $sth = $this->conn->prepare($Query);
             $sth->execute();
             return $sth;
         } catch (PDOException $e) {
-            throw new Exception("Query Failed: {$e->getMessage()}");
+            throw new Exception("Database query failed: {$e->getMessage()}");
         }
     }
 }
