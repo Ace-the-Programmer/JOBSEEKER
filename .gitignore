@@ -3,7 +3,7 @@
 
 # Sensitive data
 .env
-
+/vendor/
 # Logs
 *.log
 
