@@ -91,3 +91,20 @@ function normaliseUri($uri)
 
     return ($uri === '' || $uri === false) ? '/' : $uri;
 }
+function inspectAndDie($value)
+{
+    echo '<pre>';
+    die(var_dump($value));
+    echo '</pre>';
+}
+
+/**
+ * Sanitize Data
+ *
+ * @param string $dirty
+ * @return string
+ */
+function sanitize($dirty)
+{
+    return filter_var(trim($dirty), FILTER_SANITIZE_SPECIAL_CHARS);
+}
