@@ -1,0 +1,16 @@
+{
+    "name": "ace-the-programmer/jobseeker",
+    "description": "PHP workshop project — NEUST CICT",
+    "authors": [
+        {
+            "name": "Daryll Ace Cumbe",
+            "email": "acecumbe4@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Framework\\": "Framework/",
+            "App\\": "App/"
+        }
+    }
+}
