@@ -1,13 +1,14 @@
 <?php
-session_start();
-
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
-
 require __DIR__ . '/../vendor/autoload.php';
-require '../helpers.php';
+
 
 use Framework\Router;
+use Framework\Session;
+
+
+Session::start();
+
+require '../helpers.php';
 
 // Instatiate the router
 $router = new Router();

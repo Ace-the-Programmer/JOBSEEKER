@@ -26,7 +26,6 @@ class Database
                 $config['password'],
                 $options
             );
-            echo "Connected";
         } catch (PDOException $e) {
             throw new Exception("Database failed connection: {$e->getMessage()}");
         }
