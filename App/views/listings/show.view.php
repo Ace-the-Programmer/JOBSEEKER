@@ -58,7 +58,7 @@
     </p>
     <a
         href="mailto:<?= $listing->email ?>"
-        class="block w-full text-center px-5 py-2.5 shadow-sm rounded border text-base font-medium cursor-pointer text-indigo-700 bg-indigo-100 hover:bg-indigo-200">
+        class="block w-full text-center px-5 py-2.5 shadow-sm rounded border text-base font-medium cursor-pointer text-indigo-700 bg-indigo-100 hover:bg-indigo-200 transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg">
         Apply Now
     </a>
 </section>
